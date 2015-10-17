@@ -1,0 +1,49 @@
+* ob-scad
+org-babel support for OpenSCAD
+
+** Requirements
+   - [[http://www.openscad.org][OpenSCAD]] (2013.05+ for png export)
+
+** Setup
+Add =scad= to the =org-babel-do-load-languages= alist.
+
+#+BEGIN_SRC emacs-lisp
+  (org-babel-do-load-languages
+   'org-babel-load-languages
+   '((emacs-lisp . t)
+     (scad . t)))
+#+END_SRC
+
+** Examples
+
+*** Cube in perspective projection
+
+#+BEGIN_EXAMPLE
+#+BEGIN_SRC scad :file cube.png :exports results
+cube([5,5,5]);
+#+END_SRC
+#+RESULTS:
+[[file:cube.png]]
+#+END_EXAMPLE
+
+#+BEGIN_SRC scad :file cube.png :exports results
+cube([5,5,5]);
+#+END_SRC
+#+RESULTS:
+[[file:cube.png]]
+
+*** Cube in orthographic projection
+
+#+BEGIN_EXAMPLE
+#+BEGIN_SRC scad :file cube2.png :cmdline --projection=o :exports results
+cube([5,5,5]);
+#+END_SRC
+#+RESULTS:
+[[file:cube2.png]]
+#+END_EXAMPLE
+
+#+BEGIN_SRC scad :file cube2.png :cmdline --projection=o :exports results
+cube([5,5,5]);
+#+END_SRC
+#+RESULTS:
+[[file:cube2.png]]
