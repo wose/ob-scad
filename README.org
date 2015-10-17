@@ -18,13 +18,11 @@ Add =scad= to the =org-babel-do-load-languages= alist.
 
 *** Cube in perspective projection
 
-#+BEGIN_EXAMPLE
-#+BEGIN_SRC scad :file cube.png :exports results
-cube([5,5,5]);
-#+END_SRC
-#+RESULTS:
-[[file:cube.png]]
-#+END_EXAMPLE
+: #+BEGIN_SRC scad :file cube.png :exports results
+: cube([5,5,5]);
+: #+END_SRC
+: #+RESULTS:
+: file:cube.png
 
 #+BEGIN_SRC scad :file cube.png :exports results
 cube([5,5,5]);
@@ -34,13 +32,11 @@ cube([5,5,5]);
 
 *** Cube in orthographic projection
 
-#+BEGIN_EXAMPLE
-#+BEGIN_SRC scad :file cube2.png :cmdline --projection=o :exports results
-cube([5,5,5]);
-#+END_SRC
-#+RESULTS:
-[[file:cube2.png]]
-#+END_EXAMPLE
+: #+BEGIN_SRC scad :file cube2.png :cmdline --projection=o :exports results
+: cube([5,5,5]);
+: #+END_SRC
+: #+RESULTS:
+: file:cube2.png
 
 #+BEGIN_SRC scad :file cube2.png :cmdline --projection=o :exports results
 cube([5,5,5]);
